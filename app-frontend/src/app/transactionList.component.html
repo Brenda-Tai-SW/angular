@@ -1,0 +1,11 @@
+<div *ngIf="transactionsWithBalance">
+
+  <ul>
+    <li *ngFor="let transaction of transactionsWithBalance.transactions">
+      {{ transaction.transactionHistory }}
+    </li>
+  </ul>
+  
+  
+ <p>The current account Balance is: {{ transactionsWithBalance.accountBalance }}</p>
+</div>

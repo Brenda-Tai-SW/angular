@@ -1,0 +1,11 @@
+
+
+<form (ngSubmit)="submitTransaction()" #transactionForm="ngForm">
+  <label for="accountId">Account ID:</label>
+  <input type="text" id="accountId" name="accountId" required [(ngModel)]="accountId">
+  
+  <label for="amount">Amount:</label>
+  <input type="number" id="amount" name="amount" required [(ngModel)]="amount">
+  
+  <button type="submit" [disabled]="transactionForm.invalid">Submit</button>
+</form>

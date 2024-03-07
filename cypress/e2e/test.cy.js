@@ -40,7 +40,7 @@ describe('TransactionService', () => {
 
 describe('Form Input Type Validation', () => {
   it('should validate accountId type', () => {
-    cy.visit('/newTransaction'); // 替换为你的页面 URL
+    cy.visit('/newTransaction'); 
 
     cy.get('#accountId').type('12345').blur();
 

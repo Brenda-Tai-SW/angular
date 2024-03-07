@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
 import { TransactionService } from './transactionService';
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,7 +8,10 @@ import { ActivatedRoute } from '@angular/router';
 export class TransactionListComponent implements OnInit {
  transactionsWithBalance: any;
 
-  constructor(private route: ActivatedRoute,private transactionService: TransactionService) { }
+  constructor(private route: ActivatedRoute,
+  private transactionService: TransactionService,
+  private cdRef: ChangeDetectorRef 
+  ) { }
 
  ngOnInit(): void {
    this.loadTransactions();
@@ -26,6 +29,7 @@ loadTransactions(): void {
     this.transactionService.addTransaction(transactionRequest).subscribe(
       (response) => {
         this.transactionsWithBalance = response;
+        this.cdRef.detectChanges();
       },
       (error) => {
         console.error('Error fetching transactions:', error);

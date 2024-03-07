@@ -2,16 +2,17 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TransactionService } from './transactionService'; // Import the transaction service
 
+
 @Component({
    selector: 'app-root',
   templateUrl: './transactionForm.component.html',
 })
 export class TransactionFormComponent {
-  accountId: number;
+  accountId: string;
   amount: number;
 
   constructor(private transactionService: TransactionService, private router: Router) {
-    this.accountId =111;
+    this.accountId ="";
     this.amount = 0;
   }
 

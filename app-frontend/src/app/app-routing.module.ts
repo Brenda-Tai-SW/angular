@@ -5,7 +5,7 @@ import { TransactionListComponent } from './transactionList.component';
 
 const routes: Routes = [
   { path: 'transactions/:accountId/:amount', component: TransactionListComponent },
-  { path: 'addTransaction', component: TransactionFormComponent },
+  { path: 'newTransaction', component: TransactionFormComponent },
   { path: '**', redirectTo: '/transactions' }
 ];
 @NgModule({

@@ -7,5 +7,7 @@ module.exports = defineConfig({
     supportFile: false,
     setupNodeEvents(on, config) {},
     baseUrl: 'http://localhost:4200',
+    "specPattern": "cypress/e2e/**/*.cy.js",
   },
 })
+

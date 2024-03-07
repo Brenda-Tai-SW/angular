@@ -14,7 +14,7 @@ import { TransactionFormComponent } from './transactionForm.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule, 
+    FormsModule, // Add FormsModule to imports
     AppRoutingModule,
     HttpClientModule
   ],
